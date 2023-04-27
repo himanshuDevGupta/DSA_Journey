@@ -1,0 +1,10 @@
+<script>
+const funcs = [];
+
+for (var i = 0; i < 5; i++) {
+    console.log(i,'==========');
+  funcs.push(() => console.log(i));
+}
+
+funcs.forEach((func) => func());
+</script>
