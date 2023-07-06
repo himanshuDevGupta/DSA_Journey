@@ -1,0 +1,28 @@
+const names = [
+  "ankit",
+  "chirag",
+  "mitesh",
+  "mahesh",
+  "ankit",
+  "sanket",
+  "Sanket",
+];
+
+const countNames = (input) => {
+  let newObject = {};
+  for (let i = 0; i < input.length; i++) {
+    if (input[i]) {
+      let singleName = input[i].charAt(0).toLowerCase() + input[i].substring(1);
+      let hasKey = singleName in newObject;
+      if (hasKey) {
+        newObject[singleName] = newObject[singleName] + 1;
+      } else {
+        newObject[singleName] = 1;
+      }
+    }
+  }
+  return newObject;
+};
+
+console.log(countNames(names));
+// Output: {"ankit": 2, "chirag": 1, "mitesh": 1, "mahesh": 1, "sanket" : 2}
