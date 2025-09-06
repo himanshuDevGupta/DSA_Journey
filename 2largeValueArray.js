@@ -32,3 +32,29 @@ const arraySecondlargest = (arr) => {
 
 var newRegult =arraySecondlargest([1,2,1,2,3,4,5,6,7,8,7,4,9]);
 console.log(newRegult);
+
+
+//----------------Another Example------------------------//
+function checkEven(val) {
+    // let newArray=[]
+    let lagestValue = -Infinity;
+     let secondLargest= -Infinity;
+    for (let i = 0; i <= val.length; i++) {
+        if (val[i] > lagestValue) {
+            secondLargest = lagestValue;
+            lagestValue = val[i];
+           
+        } else if(val[i] > secondLargest) {
+            secondLargest = val[i];
+        } 
+    }
+   
+    
+    return secondLargest; 
+    
+}
+
+let inpit=[1, 3, 15, 2, 9, 6, 3]
+console.log(checkEven(inpit));
+
+
