@@ -81,6 +81,51 @@ for (let i = 0; i < n; i++) {
     console.log(row);
 }
 
+// 4 4 4 4
+// 3 3 3
+// 2 2
+// 1
+
+let n = 4;
+for (let i = n; i >= 1; i--) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += i;
+    }
+    console.log(row);
+}
+
+// * * * *
+// * * *
+// * *
+// *
+
+let n = 4;
+for (let i = n; i >= 1; i--) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += "*";
+    }
+    console.log(row);
+}
+
+//       *
+//     * *
+//   * * *
+// * * * *
+let n = 4;
+for (let i = 0; i <n; i++) {
+    let row = "";
+    for (let j = 0; j < n-(i+1); j++) {
+        row += " ";
+    }
+
+    for (let k = 0; k < i+1; k++){
+        row += "*";
+    }
+    console.log(row);
+}
+
 
 
 
