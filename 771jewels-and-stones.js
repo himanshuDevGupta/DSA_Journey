@@ -14,3 +14,13 @@ for (var i = 0; i < stones.length; i++) {
 }
 
 console.log(count)
+
+
+var numJewelsInStones = function(jewels, stones) {
+    let jSet = new Set(jewels);
+    let count = 0;
+    for (let c of stones) {
+        if (jSet.has(c)) count++;
+    }
+    return count;
+};
