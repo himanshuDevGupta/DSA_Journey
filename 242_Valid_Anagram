@@ -1,0 +1,10 @@
+let s = "anagram";
+let t = "nagaram";
+
+var isAnagram = function(s, t) {
+    return s.split("").sort().join("") ===t.split("").sort().join("")
+};
+
+
+console.log(isAnagram(s,t))
+
